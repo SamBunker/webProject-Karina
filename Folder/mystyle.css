@@ -1,0 +1,308 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;700&display=swap'); */
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #E69E19;
+    background-image: url("background.png");
+    animation: float 5s infinite ease-in-out;
+    overflow: hidden;
+}
+
+.background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url("content/cover.png");
+}
+
+.inner {
+    padding: 20px;
+}
+
+/* .sticky {
+    position: sticky;
+    top: 3px;
+    font-family: 'Shadows Into Light', cursive !important;
+} */
+
+/*------------------------------*/
+/*          Header              */
+/*------------------------------*/
+
+header {
+    padding: 1px 0 1px 0;
+    color: white;
+    font-family: 'Shadows Into Light' !important;
+    
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding-left: 16px;
+}
+
+header li {
+    display: inline-block;
+    padding: 8px;
+}
+
+
+header li img {
+    height: 90px;
+    width: auto;
+    pointer-events: none;
+}
+
+header li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+header li a:hover:not(.active) {
+    background-color: #E61961;
+    border-radius: 6%;
+
+}
+
+.active {
+    background-color: #e63819;
+    border-radius: 5%;
+}
+
+.line {
+    height: 78px;
+    background-color: white;
+    width: 1px;
+    padding: 4px;
+    border-radius: 90%;
+}
+
+.nav-right {
+    float: right;
+    padding-right: 16px;
+}
+
+.nav-img {
+    padding-top: 10px;
+    padding-right: 0px;
+    width: 120px;
+    height: auto;
+}
+
+.checkMeOut, .facebook {
+    position: absolute;
+    top: 0;
+}
+
+.checkMeOut {
+    right: 120px;
+    top: 10px;
+    width: 100px;
+    height: auto;
+}
+
+.facebook {
+    right: 0;
+}
+
+/*------------------------------*/
+/*          CONTENT             */
+/*------------------------------*/
+.upper-container {
+    padding-left: 120px;
+    padding-top: 100px;
+}
+
+.upper-container > p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 0px;
+
+}
+
+.button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    height: 25px;
+    width: 110px;
+    background-color: #E63719;
+    border: none;
+    color: white;
+    padding: 15px 12px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 4px 2px;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+}
+
+.button:hover {
+    box-shadow: inset 0 100px 0 0 #f41e42;
+}
+
+.portrait > img {
+    position: absolute;
+    left: 50%;
+    padding-right: 300px;
+    border-radius: 50px;
+    pointer-events: none;
+}
+
+.hotanimation {
+    animation: redHot 10s infinite ease-in-out;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+/*------------------------------*/
+/*          ANIMATION           */
+/*------------------------------*/
+
+@keyframes redHot {
+    0% { color: black;}
+    50% { color: #E63719;}
+    100% { color: black;}
+}
+
+@keyframes float {
+    0% {
+        background-position-y: 0px;
+    }
+    50% {
+        background-position-y: 10px;
+    }
+    100% {
+        background-position-y: 0px;
+    }
+
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(15,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeIn {
+    animation: fadein 2s;
+}
+
+/*------------------------------*/
+/*          WIDTH               */
+/*------------------------------*/
+
+@media (min-width: 1600px) {
+
+    .portrait > img {
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        padding-right: 300px;
+        border-radius: 50px;
+        pointer-events: none; 
+        width: 600px;
+        height: auto;
+    }
+
+    .upper-container {
+        padding-top: 200px;
+    }
+
+    .upper-container > p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 90px;
+        font-weight: bold;
+        line-height: 0px;
+    }
+
+    .button { 
+        height: 35px;
+        width: 165px;
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 1215px) {
+    .portrait > img {
+        display: none;
+    }
+
+    .checkMeOut {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    .nav-img {
+        display: none;
+    }
+}
+
+@media (max-width: 858px) {
+    body {
+        background-size: 860px;
+    }
+
+    li img {
+        height: 50px;
+    }
+
+    li a {
+        font-size: 20px;
+    }
+
+    .upper-container > p {
+        font-size: 40px;
+    }
+}
+
+    @media (max-width: 600px) {
+
+    .nav-img {
+        display: none;
+    }
+}

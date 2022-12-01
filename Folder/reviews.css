@@ -1,0 +1,106 @@
+/*------------------------------*/
+/*          Header              */
+/*------------------------------*/
+
+
+.headerText {
+    text-align: center;
+    font-size: 80px;
+    font-family: 'Poppins';
+}
+
+.afterText {
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Poppins';
+    padding-bottom: 40px;
+}
+
+.reviewsContainer {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+}
+
+.reviews {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 20px;
+    border-radius: 8px;
+    height: auto;
+    width: 70vw;
+}
+
+.reviews p {
+    /* font-family: 'Shadows Into Light' !important; */
+    font-family: 'Josefin Sans';
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.reviews p a {
+    color: black;
+    text-decoration: underline 0.15em rgba(255, 255, 255, 0);
+    transition: text-decoration-color 300ms;
+}
+
+.reviews p a:hover {
+    text-decoration-color: rgba(230, 56, 25, 0.7);
+}
+
+.author {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    margin: 0;
+    padding: 3px;
+    border-radius: 8px;
+    font-size: 19px;
+    font-family: 'Poppins';
+    background-color: #e63819;
+}
+
+.reviews > img {
+    padding: 0;
+    margin: 0;
+    width: 40px;
+    height: auto;
+}
+
+/* 
+.reviewsContainer > ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    display: block;
+    font-size: 45px;
+}
+
+.reviewsContainer > ul > li {
+    margin: 10px;
+    padding: 20px;
+    width: 350px;
+    background-color: green;
+    border-radius: 5%;
+    box-shadow: 0 0 0 2px black;
+} */
+
+
+
+
+/*------------------------------*/
+/*          Animations          */
+/*------------------------------*/
+
+@keyframes grow {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(0.2);
+    }
+}

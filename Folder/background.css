@@ -1,0 +1,140 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #E69E19;
+    background-image: url("background.png");
+    animation: float 5s infinite ease-in-out;
+}
+
+.background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url("content/cover.png");
+}
+
+header {
+    padding: 1px 0 1px 0;
+    color: white;
+    font-family: 'Shadows Into Light' !important;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding-left: 16px;
+}
+
+header li {
+    float: left;
+    padding: 8px;
+}
+
+
+header li img {
+    height: 90px;
+    width: auto;
+    pointer-events: none;
+}
+
+header li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 35px;
+    transition: ease-in 0.6s;
+}
+
+header li a:hover:not(.active) {
+    background-color: #E61961;
+    border-radius: 6%;
+
+}
+
+.active {
+    background-color: #e63819;
+    border-radius: 5%;
+}
+
+.line {
+    height: 78px;
+    background-color: white;
+    width: 1px;
+    padding: 4px;
+    border-radius: 90%;
+}
+
+.nav-right {
+    float: right;
+    padding-right: 16px;
+}
+
+.nav-img {
+    padding-top: 10px;
+    padding-right: 0px;
+    width: 120px;
+    height: auto;
+}
+
+.checkMeOut, .facebook {
+    position: absolute;
+    top: 0;
+}
+
+.checkMeOut {
+    right: 120px;
+    top: 10px;
+    width: 100px;
+    height: auto;
+}
+
+.facebook {
+    right: 0;
+}
+
+.inner {
+    padding: 20px;
+    height: 78vh;
+}
+
+/*------------------------------*/
+/*          Scrollbar           */
+/*------------------------------*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e63819;
+}
+
+::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+}
+
+@keyframes float {
+    0% {
+        background-position-y: 0px;
+    }
+    50% {
+        background-position-y: 10px;
+    }
+    100% {
+        background-position-y: 0px;
+    }
+
+}
